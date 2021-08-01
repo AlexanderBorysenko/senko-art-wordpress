@@ -1,0 +1,8 @@
+.block-editor-block-list__block.wp-block[data-type^='carbon-fields'] {
+    border: 1px solid black !important;
+    padding: 10px;
+}
+.cf-separator {
+    display: block;
+    border-bottom: 1px solid black;
+}
