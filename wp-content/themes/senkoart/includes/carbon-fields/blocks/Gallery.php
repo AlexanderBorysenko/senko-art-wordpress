@@ -5,13 +5,14 @@ use Carbon_Fields\Field;
 
 Block::make('crb-gallery', 'Галлерея')
     ->add_fields(array(
-        Field::make('complex', 'images', 'Картинки')->add_fields(array(
-            Field::make('image', 'image', 'Картинка')
-        ))
+        Field::make('media_gallery', 'images')
+            ->set_type(array('image')),
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+        echo "<pre>";
+        var_dump($fields['images']);
 ?>
-    <section class="gallery">
+    <!-- <section class="gallery">
         <?php
         foreach ($fields['images'] as $image) :
         ?>
@@ -22,6 +23,6 @@ Block::make('crb-gallery', 'Галлерея')
         <?php
         endforeach;
         ?>
-    </section>
+    </section> -->
 <?php
     });
