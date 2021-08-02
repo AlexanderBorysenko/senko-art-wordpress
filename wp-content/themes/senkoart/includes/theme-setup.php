@@ -16,6 +16,6 @@ add_action('wp_enqueue_scripts', 'slavonik_cream_scripts');
 add_action('after_setup_theme', 'wpdocs_theme_setup');
 function wpdocs_theme_setup()
 {
-    add_image_size('gallery-thumb', 500, 400);
+    add_image_size('gallery-thumb', 700, 500);
     add_theme_support('post-thumbnails');
 }
